@@ -1,3 +1,4 @@
+<%@page import="com.entity.User"%>
 <%@page import="com.entity.BookOrder"%>
 <%@page import="java.util.List"%>
 <%@page import="com.DB.DBConnect"%>
@@ -38,6 +39,7 @@
 		<tbody>
 
 			<%
+			User u = (User) session.getAttribute("userobj");
 			BookOrderDAOImpl dao = new BookOrderDAOImpl(DBConnect.getConn());
 			List<BookOrder> blist = dao.getAllOrders();
 

@@ -17,7 +17,6 @@ public class CartDAOImpl implements CartDAO {
 		this.conn = conn;
 	}
 
-	@Override
 	public boolean addCart(Cart c) {
 		boolean f = false;
 
@@ -45,7 +44,6 @@ public class CartDAOImpl implements CartDAO {
 		return f;
 	}
 
-	@Override
 	public List<Cart> getBookByUser(int userId) {
 		List<Cart> list = new ArrayList<Cart>();
 		Cart c = null;
@@ -81,7 +79,6 @@ public class CartDAOImpl implements CartDAO {
 		return list;
 	}
 
-	@Override
 	public boolean removeBook(int bid, int uid, int cid) {
 		boolean f = false;
 

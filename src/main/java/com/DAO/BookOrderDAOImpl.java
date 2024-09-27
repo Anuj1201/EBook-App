@@ -17,7 +17,6 @@ public class BookOrderDAOImpl implements BookOrderDAO {
 		this.conn = conn;
 	}
 
-	@Override
 	public boolean saveOrder(List<BookOrder> blist) {
 		boolean f = false;
 
@@ -54,7 +53,6 @@ public class BookOrderDAOImpl implements BookOrderDAO {
 		return f;
 	}
 
-	@Override
 	public List<BookOrder> getBook(String email) {
 
 		List<BookOrder> list = new ArrayList<BookOrder>();
@@ -93,7 +91,6 @@ public class BookOrderDAOImpl implements BookOrderDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookOrder> getAllOrders() {
 
 		List<BookOrder> list = new ArrayList<BookOrder>();

@@ -62,7 +62,8 @@
 								<tr>
 									<th class="text-center" scope="row"><%=c.getBookName()%></th>
 									<td class="text-center"><%=c.getAuthor()%></td>
-									<td class="text-center"><%=c.getPrice()%></td>
+									<td class="text-center"><i class="fas fa-rupee-sign mr-1"
+										style="display: inline;"></i><%=c.getPrice()%></td>
 									<td class="text-center"><a
 										href="remove_book?bid=<%=c.getBid()%>&&uid=<%=c.getUserId()%>&&cid=<%=c.getCid()%>"
 										class="btn btn-sm btn-danger">Remove</a></td>
@@ -76,7 +77,8 @@
 								<tr>
 									<td class="text-center">Total Price</td>
 									<td class="text-center"></td>
-									<td class="text-center"><%=totalPrice%></td>
+									<td class="text-center"><i class="fas fa-rupee-sign mr-1"
+										style="display: inline;"></i><%=totalPrice%></td>
 									<td class="text-center"></td>
 								</tr>
 							</tfoot>
@@ -92,7 +94,8 @@
 						<h3 class="text-center text-success mb-3">Your Details for
 							Order</h3>
 						<form action="order" method="post">
-						<input type="hidden" value="${userobj.id }" name="id">
+							<input type="hidden" value="${userobj.id }" name="id">
+							<input type="hidden" name="totalPrice" value="<%=totalPrice %>">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Name *</label> <input type="text"
@@ -114,7 +117,8 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Address*</label> <input type="text"
-										name="address" class="form-control" id="inputPassword4" required>
+										name="address" class="form-control" id="inputPassword4"
+										required>
 								</div>
 							</div>
 
@@ -135,14 +139,17 @@
 										name="state" class="form-control" id="inputEmail4" required>
 								</div>
 								<div class="form-group col-md-6">
-									<label for="inputPassword4">Pin Code *</label> <input type="text"
-										name="pincode" class="form-control" id="inputPassword4" required>
+									<label for="inputPassword4">Pin Code *</label> <input
+										type="text" name="pincode" class="form-control"
+										id="inputPassword4" required>
 								</div>
 							</div>
-							<div class="form-group">
-								<label>Payment Mode</label> <select class="form-control" name="payment">
+							<div class="form-group" id="paymentMode">
+								<label>Payment Mode</label> <select class="form-control"
+									name="payment">
 									<option value="noselect">--Select--</option>
 									<option value="COD">Cash on Delivery</option>
+									<option value="UPI">Online Payment</option>
 								</select>
 							</div>
 
@@ -151,6 +158,7 @@
 								<a href="index.jsp" class="btn btn-success">Continue
 									Shopping</a>
 							</div>
+							
 						</form>
 					</div>
 				</div>

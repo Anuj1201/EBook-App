@@ -17,7 +17,6 @@ public class BookDAOImpl implements BookDAO {
 		this.conn = conn;
 	}
 
-	@Override
 	public boolean addBooks(BookDetails b) {
 		boolean f = false;
 		try {
@@ -44,7 +43,6 @@ public class BookDAOImpl implements BookDAO {
 		return f;
 	}
 
-	@Override
 	public List<BookDetails> getAllBooks() {
 
 		List<BookDetails> list = new ArrayList<BookDetails>();
@@ -77,7 +75,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public BookDetails getBookById(int id) {
 
 		BookDetails b = null;
@@ -108,7 +105,6 @@ public class BookDAOImpl implements BookDAO {
 		return b;
 	}
 
-	@Override
 	public boolean updateBooks(BookDetails b) {
 		boolean f = false;
 
@@ -135,7 +131,6 @@ public class BookDAOImpl implements BookDAO {
 		return f;
 	}
 
-	@Override
 	public boolean deleteBooks(int id) {
 		boolean f = false;
 
@@ -157,7 +152,6 @@ public class BookDAOImpl implements BookDAO {
 		return f;
 	}
 
-	@Override
 	public List<BookDetails> getNewBook() {
 
 		List<BookDetails> list = new ArrayList<BookDetails>();
@@ -194,7 +188,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookDetails> getRecentBooks() {
 		List<BookDetails> list = new ArrayList<BookDetails>();
 		BookDetails b = null;
@@ -230,7 +223,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookDetails> getOldBooks() {
 
 		List<BookDetails> list = new ArrayList<BookDetails>();
@@ -267,7 +259,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookDetails> getAllRecentBooks() {
 
 		List<BookDetails> list = new ArrayList<BookDetails>();
@@ -302,7 +293,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookDetails> getAllNewBooks() {
 		List<BookDetails> list = new ArrayList<BookDetails>();
 		BookDetails b = null;
@@ -337,7 +327,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookDetails> getAllOldBooks() {
 		List<BookDetails> list = new ArrayList<BookDetails>();
 		BookDetails b = null;
@@ -372,7 +361,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public List<BookDetails> getBookByOld(String email, String cate) {
 
 		List<BookDetails> list = new ArrayList<BookDetails>();
@@ -409,7 +397,6 @@ public class BookDAOImpl implements BookDAO {
 		return list;
 	}
 
-	@Override
 	public boolean oldBookDelete(String email, String cat, int bid) {
 		boolean f = false;
 
@@ -435,7 +422,6 @@ public class BookDAOImpl implements BookDAO {
 		return f;
 	}
 
-	@Override
 	public List<BookDetails> getBookBySearch(String ch) {
 
 		List<BookDetails> list = new ArrayList<BookDetails>();

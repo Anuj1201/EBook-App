@@ -37,7 +37,6 @@ public class UserDAOImpl implements UserDAO {
 		return f;
 	}
 
-	@Override
 	public User login(String email, String password) {
 		User us = null;
 
@@ -70,7 +69,7 @@ public class UserDAOImpl implements UserDAO {
 		return us;
 	}
 
-	@Override
+	
 	public boolean checkPassword(int id, String ps) {
 		boolean f = false;
 
@@ -94,7 +93,6 @@ public class UserDAOImpl implements UserDAO {
 		return f;
 	}
 
-	@Override
 	public boolean updateProfile(User us) {
 
 		boolean f = false;
@@ -118,7 +116,6 @@ public class UserDAOImpl implements UserDAO {
 		return f;
 	}
 
-	@Override
 	public boolean checkUser(String email) {
 
 		boolean f = true;
